@@ -10,10 +10,10 @@ func Mul(x int, y int) int {
 	return x * y
 }
 
-func Div(x int, y int) int {
+func Div(x int, y int) (int, error) {
 	if y == 0 {
-		panic("Number cannot be devided by 0")
+		return 0, errors.New("Division by 0 is undefined")
 	}
 
-	return x / y
+	return x / y, nil
 }

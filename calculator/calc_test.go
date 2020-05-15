@@ -25,15 +25,21 @@ func TestMul(t *testing.T) {
 }
 
 func TestDiv(t *testing.T) {
-	if Div(4, 4) != 1 {
+	if res, _ := Div(4, 4); res != 1 {
 		t.Error("Expected 4 / 4 to equal 1")
 	}
 
-	if Div(4, 2) != 2 {
+	if res, _ := Div(4, 2); res != 2 {
 		t.Error("Expected 4 / 2 to equal 2")
 	}
 
-	if Div(3, 2) != 1 {
+	if res, _ := Div(3, 2); res != 1 {
 		t.Error("Expected 3 / 2 to equal 1")
+	}
+}
+
+func TestDivByZero(t *testing.T) {
+	if _, err := Div(4, 0); err == nil {
+		t.Error("Expected error when dividing by 0")
 	}
 }
