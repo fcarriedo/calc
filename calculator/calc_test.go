@@ -4,6 +4,12 @@ import (
 	"testing"
 )
 
+func TestSum(t *testing.T) {
+	if Sum(2, 4) != 6 {
+		t.Error("Expected 2 + 4 to equal 6")
+	}
+}
+
 func TestMul(t *testing.T) {
 	if Mul(2, 4) != 8 {
 		t.Error("Expected 2 * 4 to equal 8")
