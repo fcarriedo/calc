@@ -1,3 +1,3 @@
-module github.com/fcarriedo/calc/v2
+module github.com/fcarriedo/calc/v3
 
 go 1.14

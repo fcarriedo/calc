@@ -2,8 +2,14 @@ package calculator
 
 import "errors"
 
-func Sum(x int, y int) int {
-	return x + y
+func Sum(nums ...int) int {
+	sum := 0
+
+	for _, num := range nums {
+		sum += num
+	}
+
+	return sum
 }
 
 func Mul(x int, y int) int {
