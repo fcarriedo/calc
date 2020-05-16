@@ -1,15 +1,12 @@
 package calculator
 
-import "errors"
+import (
+	"errors"
+	"github.com/thatisuday/nummanip/calc"
+)
 
 func Sum(nums ...int) int {
-	sum := 0
-
-	for _, num := range nums {
-		sum += num
-	}
-
-	return sum
+	return calc.Add(nums...)
 }
 
 func Mul(x int, y int) int {
