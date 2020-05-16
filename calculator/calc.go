@@ -2,6 +2,7 @@ package calculator
 
 import (
 	"errors"
+	"github.com/fcarriedo/mult"
 	"github.com/thatisuday/nummanip/calc"
 )
 
@@ -12,7 +13,7 @@ func Sum(nums ...int) int {
 
 // Multiplies the 2 numbers given as arguments
 func Mul(x int, y int) int {
-	return x * y
+	return mult.Mult(x, y)
 }
 
 // Divides x / y.
