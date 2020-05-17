@@ -12,6 +12,7 @@ func Sum(nums ...int) int {
 }
 
 // Multiplies the 2 numbers given as arguments
+// Note: Delegating to a dependency.
 func Mul(x int, y int) int {
 	return mult.Mult(x, y)
 }
